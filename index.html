@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>David Watson</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/><style>@font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?9yug7q');
-  src:  url('fonts/icomoon.eot?9yug7q#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?9yug7q') format('truetype'),
-    url('fonts/icomoon.woff?9yug7q') format('woff'),
-    url('fonts/icomoon.svg?9yug7q#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?z1lat9');
+  src:  url('fonts/icomoon.eot?z1lat9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?z1lat9') format('truetype'),
+    url('fonts/icomoon.woff?z1lat9') format('woff'),
+    url('fonts/icomoon.svg?z1lat9#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,20 +24,64 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram:before {
-  content: "\e905";
+.icon-gitlab .path1:before {
+  content: "\e906";
+  color: rgb(252, 109, 38);
 }
-.icon-trophy:before {
-  content: "\e605";
+.icon-gitlab .path2:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(226, 67, 41);
 }
-.icon-office:before {
-  content: "\e606";
+.icon-gitlab .path3:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(252, 109, 38);
 }
-.icon-clock:before {
-  content: "\e60a";
+.icon-gitlab .path4:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(252, 163, 38);
 }
-.icon-reddit:before {
-  content: "\e609";
+.icon-gitlab .path5:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(226, 67, 41);
+}
+.icon-gitlab .path6:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(252, 109, 38);
+}
+.icon-gitlab .path7:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(252, 163, 38);
+}
+.icon-gitlab .path8:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(226, 67, 41);
+}
+.icon-meetup .path1:before {
+  content: "\e901";
+  color: rgb(255, 255, 255);
+}
+.icon-meetup .path2:before {
+  content: "\e902";
+  margin-left: -1.5em;
+  color: rgb(240, 1, 1);
+}
+.icon-meetup .path3:before {
+  content: "\e903";
+  margin-left: -1.5em;
+  color: rgb(3, 3, 3);
+}
+.icon-blogger:before {
+  content: "\e900";
+}
+.icon-exercism:before {
+  content: "\e601";
 }
 .icon-telegram:before {
   content: "\e904";
@@ -147,25 +191,20 @@
 .icon-facebook:before {
   content: "\f230";
 }
-.icon-meetup .path1:before {
-  content: "\e901";
-  color: rgb(255, 255, 255);
+.icon-instagram:before {
+  content: "\e905";
 }
-.icon-meetup .path2:before {
-  content: "\e902";
-  margin-left: -1.5em;
-  color: rgb(240, 1, 1);
+.icon-trophy:before {
+  content: "\e605";
 }
-.icon-meetup .path3:before {
-  content: "\e903";
-  margin-left: -1.5em;
-  color: rgb(3, 3, 3);
+.icon-office:before {
+  content: "\e606";
 }
-.icon-blogger:before {
-  content: "\e900";
+.icon-clock:before {
+  content: "\e60a";
 }
-.icon-exercism:before {
-  content: "\e601";
+.icon-reddit:before {
+  content: "\e609";
 }
 .icon-profile:before {
   content: "\e600";
@@ -185,12 +224,6 @@
 .icon-newspaper:before {
   content: "\e607";
 }
-.icon-dots-three-horizontal:before {
-  content: "\e60b";
-}
-.icon-thumbs-up:before {
-  content: "\e604";
-}
 .icon-chevron-down:before {
   content: "\e60c";
 }
@@ -206,7 +239,6 @@
 .icon-board:before {
   content: "\e608";
 }
-
 
 .relative {
   position: relative;
@@ -247,6 +279,15 @@
 .label-keyword:last-child {
   margin-right: 0;
 }
+.label-keyword p {
+  margin: 0;
+}
+.label-keyword a {
+  color: white;
+}
+.label-keyword a:hover {
+  text-decoration: none;
+}
 .link-disguise {
   color: inherit;
 }
@@ -263,7 +304,7 @@
 }
 .fs-lg {
   font-size: 1.33333333em;
-  line-height: .75em;
+  line-height: 0.75em;
   vertical-align: -15%;
 }
 .fs-2x {
@@ -284,10 +325,11 @@
   padding: 0;
   outline: none !important;
 }
+/* the version when the icon file is last updated */
 @font-face {
   font-family: 'jst-elegant';
-  src: url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.eot?f218wo");
-  src: url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.eot?f218wo#iefix") format('embedded-opentype'), url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.ttf?f218wo") format('truetype'), url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.woff?f218wo") format('woff'), url("//unpkg.com/jsonresume-theme-elegant@1.10.1/assets/icomoon/fonts/icomoon.svg?f218wo#icomoon") format('svg');
+  src: url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.eot?f218wo");
+  src: url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.eot?f218wo#iefix") format('embedded-opentype'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.ttf?f218wo") format('truetype'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.woff?f218wo") format('woff'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.svg?f218wo#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -672,12 +714,12 @@ body {
   color: #d31e40;
 }
 .link-stackoverflow {
-  color: #f48024;
+  color: #8e8e92;
 }
 .link-stackoverflow:hover,
 .link-stackoverflow:focus {
   text-decoration: none;
-  color: #c3661c;
+  color: #747479;
 }
 .link-stackexchange {
   color: #62b0df;
@@ -984,7 +1026,45 @@ body {
 </li><li class="mop-wrapper"><p>Provided technical support for internal and external users.</p>
 </li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Computer Software Engineer</strong>,&nbsp;Innovak Intl</p><p class="text-muted"><small><span class="space-right">Jan, 1999 - Jul, 2002</span><span><i class="icon-clock mr-5"></i>3 years 6 months</span></small></p><div class="mop-wrapper space-bottom"></div><ul><li class="mop-wrapper"><p>Wrote a textbook inventory management system for school district systems using Visual Basic 6. The system included the ability to transfer inventory from one school to another using a central database located at a district or other regional office.</p>
 </li><li class="mop-wrapper"><p>Developed, tested, and debugged various other utilities.</p>
-</li></ul></div></li></ul></div></div><div class="detail" id="skills"><div class="icon"><i class="fs-lg icon-tools"></i><span class="mobile-title">Skills</span></div><div class="info"><h4 class="title text-uppercase">Skills</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested card-skills"><div class="skill-info"><strong>Front-End</strong><div class="space-top labels"><span class="label label-keyword">React</span><span class="label label-keyword">JavaScript</span><span class="label label-keyword">ES6+</span><span class="label label-keyword">TypeScript</span><span class="label label-keyword">Polymer</span><span class="label label-keyword">AngularJS</span><span class="label label-keyword">Web Components</span><span class="label label-keyword">HTML5</span><span class="label label-keyword">CSS3</span><span class="label label-keyword">SASS/SCSS</span><span class="label label-keyword">LESS</span><span class="label label-keyword">PostCSS</span><span class="label label-keyword">Bootstrap</span><span class="label label-keyword">jQuery</span><span class="label label-keyword">AJAX</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Back-End</strong><div class="space-top labels"><span class="label label-keyword">Node.js</span><span class="label label-keyword">Express</span><span class="label label-keyword">Koa</span><span class="label label-keyword">PHP</span><span class="label label-keyword">Symfony2</span><span class="label label-keyword">REST</span><span class="label label-keyword">MySQL</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Amazon Web Services</strong><div class="space-top labels"><span class="label label-keyword">DynamoDB</span><span class="label label-keyword">Lambda</span><span class="label label-keyword">API Gateway</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Others</strong><div class="space-top labels"><span class="label label-keyword">Git</span><span class="label label-keyword">Docker</span><span class="label label-keyword">MVC</span><span class="label label-keyword">OOP</span><span class="label label-keyword">JSON</span><span class="label label-keyword">XML</span><span class="label label-keyword">Agile</span><span class="label label-keyword">Scrum</span><span class="label label-keyword">Kanban</span><span class="label label-keyword">PMP</span><span class="label label-keyword">SDLC</span><span class="label label-keyword">TDD</span><span class="label label-keyword">BDD</span></div></div></li></ul></div></div></div><div class="detail" id="education"><div class="icon"><i class="fs-lg icon-graduation-cap"></i><span class="mobile-title">Education</span></div><div class="info"><h4 class="title text-uppercase">Education</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested"><div class="content"><p class="clear-margin relative"><strong>Programming and Information Technology, Certification,&nbsp;</strong>New Horizons Computer Learning Center</p><p class="text-muted clear-margin"><small>Feb, 2009 - Jul, 2009</small></p><i></i></div></li><li class="card card-nested"><div class="content"><p class="clear-margin relative"><strong>Computer Science, Bachelor Coursework,&nbsp;</strong>University of South Carolina Upstate</p><p class="text-muted clear-margin"><small>Aug, 2006 - Jul, 2008</small></p><i></i></div></li><li class="card card-nested"><div class="content"><p class="clear-margin relative"><strong>Mechanical Engineering, Bachelor Coursework,&nbsp;</strong>University of Mississippi</p><p class="text-muted clear-margin"><small>Aug, 2002 - May, 2003</small></p><i></i></div></li></ul></div></div></div></div></div></section></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script>$(function () {
+</li></ul></div></li></ul></div></div><div class="detail" id="skills"><div class="icon"><i class="fs-lg icon-tools"></i><span class="mobile-title">Skills</span></div><div class="info"><h4 class="title text-uppercase">Skills</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested card-skills"><div class="skill-info"><strong>Front-End</strong><div class="space-top labels"><span class="label label-keyword"><p>React</p>
+</span><span class="label label-keyword"><p>JavaScript</p>
+</span><span class="label label-keyword"><p>ES6+</p>
+</span><span class="label label-keyword"><p>TypeScript</p>
+</span><span class="label label-keyword"><p>Polymer</p>
+</span><span class="label label-keyword"><p>AngularJS</p>
+</span><span class="label label-keyword"><p>Web Components</p>
+</span><span class="label label-keyword"><p>HTML5</p>
+</span><span class="label label-keyword"><p>CSS3</p>
+</span><span class="label label-keyword"><p>SASS/SCSS</p>
+</span><span class="label label-keyword"><p>LESS</p>
+</span><span class="label label-keyword"><p>PostCSS</p>
+</span><span class="label label-keyword"><p>Bootstrap</p>
+</span><span class="label label-keyword"><p>jQuery</p>
+</span><span class="label label-keyword"><p>AJAX</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Back-End</strong><div class="space-top labels"><span class="label label-keyword"><p>Node.js</p>
+</span><span class="label label-keyword"><p>Express</p>
+</span><span class="label label-keyword"><p>Koa</p>
+</span><span class="label label-keyword"><p>PHP</p>
+</span><span class="label label-keyword"><p>Symfony2</p>
+</span><span class="label label-keyword"><p>REST</p>
+</span><span class="label label-keyword"><p>MySQL</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Amazon Web Services</strong><div class="space-top labels"><span class="label label-keyword"><p>DynamoDB</p>
+</span><span class="label label-keyword"><p>Lambda</p>
+</span><span class="label label-keyword"><p>API Gateway</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Others</strong><div class="space-top labels"><span class="label label-keyword"><p>Git</p>
+</span><span class="label label-keyword"><p>Docker</p>
+</span><span class="label label-keyword"><p>MVC</p>
+</span><span class="label label-keyword"><p>OOP</p>
+</span><span class="label label-keyword"><p>JSON</p>
+</span><span class="label label-keyword"><p>XML</p>
+</span><span class="label label-keyword"><p>Agile</p>
+</span><span class="label label-keyword"><p>Scrum</p>
+</span><span class="label label-keyword"><p>Kanban</p>
+</span><span class="label label-keyword"><p>PMP</p>
+</span><span class="label label-keyword"><p>SDLC</p>
+</span><span class="label label-keyword"><p>TDD</p>
+</span><span class="label label-keyword"><p>BDD</p>
+</span></div></div></li></ul></div></div></div><div class="detail" id="education"><div class="icon"><i class="fs-lg icon-graduation-cap"></i><span class="mobile-title">Education</span></div><div class="info"><h4 class="title text-uppercase">Education</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested"><div class="content"><p class="clear-margin relative"><strong>Programming and Information Technology, Certification,&nbsp;</strong>New Horizons Computer Learning Center</p><p class="text-muted clear-margin"><small>Feb, 2009 - Jul, 2009</small></p><i></i></div></li><li class="card card-nested"><div class="content"><p class="clear-margin relative"><strong>Computer Science, Bachelor Coursework,&nbsp;</strong>University of South Carolina Upstate</p><p class="text-muted clear-margin"><small>Aug, 2006 - Jul, 2008</small></p><i></i></div></li><li class="card card-nested"><div class="content"><p class="clear-margin relative"><strong>Mechanical Engineering, Bachelor Coursework,&nbsp;</strong>University of Mississippi</p><p class="text-muted clear-margin"><small>Aug, 2002 - May, 2003</small></p><i></i></div></li></ul></div></div></div></div></div></section></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script>$(function () {
   var toggleFloatingMenu = function() {
     $( '.js-floating-nav' ).toggleClass( 'is-visible' );
     $( '.js-floating-nav-trigger' ).toggleClass( 'is-open' );
