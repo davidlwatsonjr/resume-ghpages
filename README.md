@@ -1,22 +1,20 @@
-# Resume preview
+# David Watson's resume
 
-The current site entry is `index.html`. The new theme builds the separate
-`v2.html` preview.
+GitHub Pages serves the generated `index.html` at
+[resume.davidlwatsonjr.com](https://resume.davidlwatsonjr.com/).
+The former preview and theme URLs redirect to the homepage.
 
-The original checkout contains generated HTML rather than the original JSON
-Resume source. The checked-in `resume.json` was reconstructed from the
-published resume. Replace it with the original source if it becomes available.
-
-Edit `resume.json` to update the preview, then run:
+Edit `resume.json`, then regenerate the page with Node.js:
 
 ```sh
-node build-v2.cjs
+node build.cjs
 ```
 
-Commit both the data and the regenerated `v2.html`. The build needs Node.js
-and has no package dependencies. The local theme package exports
-`render(resume)` using the JSON Resume theme contract.
+Commit the source changes and the updated `index.html`. The build has no
+package dependencies. The theme in `theme/` exports `render(resume)`
+using the JSON Resume theme contract. The checked-in JSON was reconstructed
+from the prior public resume.
 
-In Chrome, open the preview and choose **Print / Save PDF**. Set the
-destination to **Save as PDF**, use **Letter** paper, keep the scale at
-**100%**, and turn off **Headers and footers** for a clean copy.
+To export a PDF in Chrome, use **Print / Save PDF**, select **Save as PDF**
+and **US Letter**, and turn off **Headers and footers**. Start with a scale
+of **100%**.
