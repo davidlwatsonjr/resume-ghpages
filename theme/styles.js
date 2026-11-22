@@ -112,26 +112,29 @@ h3 { font-size: 1.05rem; line-height: 1.35; }
   .entry-head { flex-wrap: wrap; gap: .2rem .8rem; }
 }
 
-@page { size: letter; margin: .54in .6in; }
+@page { size: letter; margin: .46in .55in; }
 @media print {
-  :root { font: 10pt/1.32 Arial, sans-serif; }
+  :root { font: 10pt/1.24 Arial, sans-serif; }
   body, .resume { background: white; color: black; }
   .toolbar, .portrait { display: none; }
   .resume { max-width: none; padding: 0; margin: 0; border: 0; box-shadow: none; }
-  .masthead { padding-bottom: 9pt; break-inside: avoid; }
+  .masthead { padding-bottom: 7pt; break-inside: avoid; }
   h1 { font-size: 28pt; letter-spacing: -.02em; }
   .role { margin-top: 3pt; font-size: 13pt; }
   .contact { margin-top: 4pt; gap: 1pt 9pt; font-size: 9pt; }
-  .section { display: block; padding: 7pt 0; border-top: 1px solid #999; }
+  .section { display: block; padding: 5pt 0; border-top: 1px solid #999; }
   h2 { font-size: 10pt; padding: 0; margin-bottom: 4pt; break-after: avoid; }
   h3 { font-size: 10pt; }
-  .entry-head { display: block; break-inside: avoid; break-after: avoid; }
-  .entry + .entry { margin-top: 5pt; padding-top: 0; border: 0; }
+  .entry-head { display: flex; gap: 8pt; break-inside: avoid; break-after: avoid; }
+  .entry-head h3, .entry-head .byline, .compact-row h3, .compact-row p { display: inline; }
+  .entry-head .byline::before, .compact-row p:not(:empty)::before { content: " · "; }
+  .entry-head .date { margin-left: auto; text-align: right; }
+  .entry + .entry { margin-top: 4pt; padding-top: 0; border: 0; }
   .byline, .date, .compact-row p { font-size: 9pt; }
   .entry > p, .entry ul { margin-top: 2pt; }
   .entry li + li, .section-content > p + p { margin-top: 1pt; }
   .entry li, .compact-row { break-inside: avoid; }
-  .compact-row + .compact-row { margin-top: 3pt; }
+  .compact-row + .compact-row { margin-top: 2pt; }
   p, li { orphans: 2; widows: 2; }
   h2, .role, .contact, .byline, .date, .compact-row p, a { color: black; }
 }
