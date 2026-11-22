@@ -46,7 +46,17 @@ a { color: var(--accent); text-underline-offset: .2em; overflow-wrap: anywhere; 
   border-top: .4rem solid var(--accent);
   box-shadow: 0 12px 44px #13312a14;
 }
-.masthead { padding-bottom: 2.15rem; }
+.masthead { display: flow-root; padding-bottom: 2.15rem; }
+.portrait {
+  float: right;
+  width: clamp(5rem, 15vw, 9rem);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin: .2rem 0 .7rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: .35rem;
+}
 h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.6rem, 8vw, 5.3rem);
@@ -106,7 +116,7 @@ h3 { font-size: 1.05rem; line-height: 1.35; }
 @media print {
   :root { font: 10pt/1.32 Arial, sans-serif; }
   body, .resume { background: white; color: black; }
-  .toolbar { display: none; }
+  .toolbar, .portrait { display: none; }
   .resume { max-width: none; padding: 0; margin: 0; border: 0; box-shadow: none; }
   .masthead { padding-bottom: 9pt; break-inside: avoid; }
   h1 { font-size: 28pt; letter-spacing: -.02em; }

@@ -55,6 +55,10 @@ function render(resume = {}) {
   const { basics = {} } = resume;
   const { location = {} } = basics;
   const locationText = join([location.city, location.region, location.countryCode], ', ');
+  const portraitUrl = basics.image ?? '';
+  const portrait = /^(https?:\/\/|[\w.-]+\/)/i.test(portraitUrl)
+    ? '<img class="portrait" src="' + escape(portraitUrl) + '" width="400" height="400" alt="">'
+    : '';
   const contacts = [
     escape(locationText),
     link('mailto:' + basics.email, basics.email),
@@ -78,6 +82,7 @@ function render(resume = {}) {
   <div class="toolbar"><button id="print" type="button">Print / Save PDF</button></div>
   <main class="resume">
     <header class="masthead">
+      ${portrait}
       <h1>${escape(basics.name || 'Resume')}</h1>
       ${basics.label ? '<p class="role">' + escape(basics.label) + '</p>' : ''}
       ${contacts.length ? '<ul class="contact" aria-label="Contact and profiles">' + contacts.map((contact) => '<li>' + contact + '</li>').join('') + '</ul>' : ''}

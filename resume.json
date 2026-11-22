@@ -2,6 +2,7 @@
   "basics": {
     "name": "David Watson",
     "label": "Senior Engineering Manager",
+    "image": "assets/headshot.jpg",
     "email": "resume@davidlwatsonjr.com",
     "url": "https://davidlwatsonjr.com",
     "location": {
