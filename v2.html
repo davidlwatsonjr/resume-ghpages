@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David Watson | Senior Engineering Manager</title>
+  <style>
+:root {
+  color-scheme: light;
+  --canvas: #e9eeed;
+  --paper: #fdfcf9;
+  --ink: #192928;
+  --muted: #4c605e;
+  --accent: #126158;
+  --line: #cbd7d3;
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); }
+h1, h2, h3, p, ul { margin: 0; }
+a { color: var(--accent); text-underline-offset: .2em; overflow-wrap: anywhere; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.toolbar {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 1.4rem 0 .8rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.toolbar button {
+  min-height: 44px;
+  padding: .5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: .25rem;
+  background: var(--paper);
+  color: var(--accent);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+.toolbar button:hover { background: var(--accent); color: white; }
+
+.resume {
+  max-width: 68rem;
+  margin: 0 auto 3rem;
+  padding: clamp(1.6rem, 6vw, 4.75rem);
+  background: var(--paper);
+  border-top: .4rem solid var(--accent);
+  box-shadow: 0 12px 44px #13312a14;
+}
+.masthead { padding-bottom: 2.15rem; }
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 8vw, 5.3rem);
+  font-weight: 400;
+  letter-spacing: -.055em;
+  line-height: 1.02;
+}
+.role { margin-top: .6rem; color: var(--accent); font-size: clamp(1.1rem, 3vw, 1.45rem); font-weight: 650; }
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .22rem 1.15rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.55rem 0;
+  border-top: 1px solid var(--line);
+}
+.section:last-child { padding-bottom: 0; }
+h2 {
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  padding-top: .25rem;
+}
+h3 { font-size: 1.05rem; line-height: 1.35; }
+.entry + .entry { margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.entry-head { display: flex; justify-content: space-between; gap: .6rem 1rem; }
+.byline { color: var(--muted); font-size: .92rem; }
+.date { color: var(--muted); font-size: .83rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.entry > p, .entry ul { margin-top: .4rem; }
+.entry ul { padding-left: 1.15rem; }
+.entry li + li, .section-content > p + p { margin-top: .3rem; }
+.compact-row + .compact-row { margin-top: .65rem; }
+.compact-row p { color: var(--muted); font-size: .93rem; }
+
+@media screen and (max-width: 72rem) {
+  .toolbar { padding-inline: 1rem; }
+}
+@media screen and (max-width: 42rem) {
+  .section { display: block; }
+  h2 { margin-bottom: .7rem; }
+  .entry-head { flex-wrap: wrap; gap: .2rem .8rem; }
+}
+
+@page { size: letter; margin: .54in .6in; }
+@media print {
+  :root { font: 10pt/1.32 Arial, sans-serif; }
+  body, .resume { background: white; color: black; }
+  .toolbar { display: none; }
+  .resume { max-width: none; padding: 0; margin: 0; border: 0; box-shadow: none; }
+  .masthead { padding-bottom: 9pt; break-inside: avoid; }
+  h1 { font-size: 28pt; letter-spacing: -.02em; }
+  .role { margin-top: 3pt; font-size: 13pt; }
+  .contact { margin-top: 4pt; gap: 1pt 9pt; font-size: 9pt; }
+  .section { display: block; padding: 7pt 0; border-top: 1px solid #999; }
+  h2 { font-size: 10pt; padding: 0; margin-bottom: 4pt; break-after: avoid; }
+  h3 { font-size: 10pt; }
+  .entry-head { display: block; break-inside: avoid; break-after: avoid; }
+  .entry + .entry { margin-top: 5pt; padding-top: 0; border: 0; }
+  .byline, .date, .compact-row p { font-size: 9pt; }
+  .entry > p, .entry ul { margin-top: 2pt; }
+  .entry li + li, .section-content > p + p { margin-top: 1pt; }
+  .entry li, .compact-row { break-inside: avoid; }
+  .compact-row + .compact-row { margin-top: 3pt; }
+  p, li { orphans: 2; widows: 2; }
+  h2, .role, .contact, .byline, .date, .compact-row p, a { color: black; }
+}
+</style>
+</head>
+<body>
+  <div class="toolbar"><button id="print" type="button">Print / Save PDF</button></div>
+  <main class="resume">
+    <header class="masthead">
+      <h1>David Watson</h1>
+      <p class="role">Senior Engineering Manager</p>
+      <ul class="contact" aria-label="Contact and profiles"><li>Orlando, Florida, US</li><li><a href="mailto:resume@davidlwatsonjr.com">resume@davidlwatsonjr.com</a></li><li><a href="https://davidlwatsonjr.com">davidlwatsonjr.com</a></li><li><a href="https://github.com/davidlwatsonjr">GitHub</a></li><li><a href="https://www.linkedin.com/in/davidlwatsonjr">LinkedIn</a></li></ul>
+    </header>
+    <section class="section "><h2>Profile</h2><div class="section-content"><p>David is a certified Software Engineer/IT professional with over 15 years of experience in web and application development, network administration, and technical support. He&#39;s confident, personable, a quick learner, and motivated by challenge and responsibility. He has demonstrated an ability to assess client or project needs accurately and manage tasks at hand with a focus toward exceeding customer expectations. As well, he possesses exemplary time management and client relations skills along with very broad and extensive knowledge of many web and application development technologies. David is extremely ambitious and looking for new challenges and exciting opportunities with potential for growth.</p></div></section>
+    <section class="section "><h2>Experience</h2><div class="section-content"><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>Senior Engineering Manager</h3>
+      <p class="byline">PlanetBids</p>
+    </div>
+    <p class="date">Jan 2024 – Present</p>
+  </header>
+  
+  <ul><li>Architected transition from self-hosted application and database servers to cloud-based AWS services.</li></ul>
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>Freelance Senior Software Engineer</h3>
+      <p class="byline">Braintrust</p>
+    </div>
+    <p class="date">Aug 2021 – Dec 2023</p>
+  </header>
+  
+  <ul><li>Designed and developed features for Stanley Black &amp; Decker OneConstruct app using React, Javascript, and Redux.</li><li>Led team of engineers in React development to build and maintain Guardian-well.com for Guardian Life Insurance Company</li></ul>
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>Web Developer</h3>
+      <p class="byline">iFit</p>
+    </div>
+    <p class="date">Mar 2020 – Aug 2021</p>
+  </header>
+  
+  <ul><li>Developed and maintained numerous web projects, both back-end and front-end, using TypeScript and React</li><li>Used AWS IoT to implement a smart device feature allowing Alexa voice control of &#39;smartbells&#39;</li><li>Optimized the saving of activity logs uploaded by exercise machines resulting in a 35% reduction in end-of-workout waiting times</li><li>Developed features to shard database connections by workout as well as by user when the workout is a &#39;Live Workout&#39;</li></ul>
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>Lead Web Developer - Software Engineer II</h3>
+      <p class="byline">Electronic Arts</p>
+    </div>
+    <p class="date">Jul 2012 – Mar 2020</p>
+  </header>
+  
+  <ul><li>In 2018, started utilizing React, React Native, TypeScript, Node.js and even QT to build a design system and game delivery platform focused on cross-platform (Xbox, iOS, Android, Web, etc.) consistency and rapid updates.</li><li>Led new EA.com project development through alpha phase, designing and documenting projected architecture and implementing new technologies, processes, and patterns to completely revamp web development throughout the EA marketing ecosystem. This has eliminated roughly 80% of the redundant, boilerplate work required to build new projects, allowing developers to focus on research and innovation. Polymer/Web Components, Play Framework on Java, and Adobe Experience Manager are some of the technologies used.</li><li>Using new EA.com-founded architecture and processes, developed Titanfall Tips and Tricks application in one 2-week sprint.</li><li>Designed and developed FIFA 2014 World Cup Bracket Tournament Challenge. This application allowed players to submit a bracket prediction for the 2014 World Cup. It included features like allowing users to re/submit a bracket mid-tournament for a pre-calculated penalty, automatic calculation of scores and leaderboards after each match result was posted, and sharing of a player&#39;s bracket for increased social engagement. For the duration of the 2014 World Cup, EASPORTS.com saw a 2,500+% increase in traffic. AngularJS, Symfony2, and MySQL were some of the technologies used.</li><li>Designed and developed many other applications in the past including Madden Ultimate Team 13 and 14 game-to-web extensions, Madden Connected Careers/Connected Franchise 13 and 14 game-to-web extensions, NCAA Online Dynasty game-to-web extension, PGA Tiger Woods Country Clubs application, etc.</li></ul>
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>Senior Software Developer</h3>
+      <p class="byline">MindComet</p>
+    </div>
+    <p class="date">Feb 2012 – Jul 2012</p>
+  </header>
+  
+  <ul><li>Responsible for development of multiple client websites from Alpha development to quality assurance stages. This involved both back-end and front-end development. Many different technologies were used, including PHP and C# on ASP.NET, Drupal and Umbraco frameworks, HTML5, CSS3, Javascript, jQuery, et al.</li><li>Assisted with finalizing development of Drupal site for Bankers Healthcare Group.</li><li>Architected and developed new site for Labor Finders using Umbraco framework with C# ASP.NET extensions.</li></ul>
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>Freelance Web Developer</h3>
+      <p class="byline">Home</p>
+    </div>
+    <p class="date">Aug 2010 – Feb 2012</p>
+  </header>
+  
+  <ul><li>Scruffymurphysorlando.com - Converted static HTML site to Wordpress resulting in ease of maintenance/changes</li><li>Pawsketeers.com - Various site upgrades and changes using Couponic script based on Yii Framework</li></ul>
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>Web Developer</h3>
+      <p class="byline">Barnett Murphy, Inc</p>
+    </div>
+    <p class="date">Aug 2010 – Feb 2011</p>
+  </header>
+  
+  <ul><li>Assisted with design and development of a direct marketing mailer portal which allowed Toyota dealerships throughout the southeastern United States to order targeted mailers and increase sales.</li></ul>
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>Business Solutions Support Lead</h3>
+      <p class="byline">Bright House Networks</p>
+    </div>
+    <p class="date">Jul 2009 – Mar 2012</p>
+  </header>
+  
+  <ul><li>Lead Technician/Supervisor for Business Solutions Support</li><li>Provided Tier I-III support and resolution.</li><li>Developed and maintained a service tool hub (BC Server) that allowed integration of various tools necessary for call center use. This tool hub greatly increased agent efficiency by providing interfaces and services to allow for quick modem/UBR configuration, reclaiming of stale static IP blocks, and others functionalities.</li><li>Developed and maintained various online forms necessary for call center operation, including an adjustment request form that would output a PDF and send it as an e-mail attachment to leadership for processing.</li></ul>
+  
+  </article></div></section>
+    <section class="section compact"><h2>Skills</h2><div class="section-content"><div class="compact-row"><h3>Front-End</h3><p>React, JavaScript, ES6+, TypeScript, Polymer, AngularJS, Web Components, HTML5, CSS3, SASS/SCSS, LESS, PostCSS, Bootstrap, jQuery, AJAX</p></div><div class="compact-row"><h3>Back-End</h3><p>Node.js, Express, Koa, PHP, Symfony2, REST, MySQL</p></div><div class="compact-row"><h3>Amazon Web Services</h3><p>DynamoDB, Lambda, API Gateway, SNS, SQS</p></div><div class="compact-row"><h3>Others</h3><p>Git, Docker, MVC, OOP, JSON, XML, Agile, Scrum, Kanban, PMP, SDLC, TDD, BDD</p></div></div></section>
+    <section class="section "><h2>Education</h2><div class="section-content"><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>New Horizons Computer Learning Center</h3>
+      <p class="byline">Programming and Information Technology · Certification</p>
+    </div>
+    <p class="date">Feb 2009 – Jul 2009</p>
+  </header>
+  
+  
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>University of South Carolina Upstate</h3>
+      <p class="byline">Computer Science · Bachelor Coursework</p>
+    </div>
+    <p class="date">Aug 2006 – Jul 2008</p>
+  </header>
+  
+  
+  
+  </article><article class="entry">
+  <header class="entry-head">
+    <div>
+      <h3>University of Mississippi</h3>
+      <p class="byline">Mechanical Engineering · Bachelor Coursework</p>
+    </div>
+    <p class="date">Aug 2002 – May 2003</p>
+  </header>
+  
+  
+  
+  </article></div></section>
+    
+    
+    
+    
+    
+    
+    
+    
+  </main>
+  <script>document.getElementById('print').addEventListener('click', () => window.print());</script>
+</body>
+</html>

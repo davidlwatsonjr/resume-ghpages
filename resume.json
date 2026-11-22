@@ -1,0 +1,198 @@
+{
+  "basics": {
+    "name": "David Watson",
+    "label": "Senior Engineering Manager",
+    "email": "resume@davidlwatsonjr.com",
+    "url": "https://davidlwatsonjr.com",
+    "location": {
+      "city": "Orlando",
+      "region": "Florida",
+      "countryCode": "US"
+    },
+    "summary": "David is a certified Software Engineer/IT professional with over 15 years of experience in web and application development, network administration, and technical support. He's confident, personable, a quick learner, and motivated by challenge and responsibility. He has demonstrated an ability to assess client or project needs accurately and manage tasks at hand with a focus toward exceeding customer expectations. As well, he possesses exemplary time management and client relations skills along with very broad and extensive knowledge of many web and application development technologies. David is extremely ambitious and looking for new challenges and exciting opportunities with potential for growth.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "davidlwatsonjr",
+        "url": "https://github.com/davidlwatsonjr"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "davidlwatsonjr",
+        "url": "https://www.linkedin.com/in/davidlwatsonjr"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "PlanetBids",
+      "position": "Senior Engineering Manager",
+      "startDate": "2024-01",
+      "highlights": [
+        "Architected transition from self-hosted application and database servers to cloud-based AWS services."
+      ]
+    },
+    {
+      "name": "Braintrust",
+      "position": "Freelance Senior Software Engineer",
+      "startDate": "2021-08",
+      "endDate": "2023-12",
+      "highlights": [
+        "Designed and developed features for Stanley Black & Decker OneConstruct app using React, Javascript, and Redux.",
+        "Led team of engineers in React development to build and maintain Guardian-well.com for Guardian Life Insurance Company"
+      ]
+    },
+    {
+      "name": "iFit",
+      "position": "Web Developer",
+      "startDate": "2020-03",
+      "endDate": "2021-08",
+      "highlights": [
+        "Developed and maintained numerous web projects, both back-end and front-end, using TypeScript and React",
+        "Used AWS IoT to implement a smart device feature allowing Alexa voice control of 'smartbells'",
+        "Optimized the saving of activity logs uploaded by exercise machines resulting in a 35% reduction in end-of-workout waiting times",
+        "Developed features to shard database connections by workout as well as by user when the workout is a 'Live Workout'"
+      ]
+    },
+    {
+      "name": "Electronic Arts",
+      "position": "Lead Web Developer - Software Engineer II",
+      "startDate": "2012-07",
+      "endDate": "2020-03",
+      "highlights": [
+        "In 2018, started utilizing React, React Native, TypeScript, Node.js and even QT to build a design system and game delivery platform focused on cross-platform (Xbox, iOS, Android, Web, etc.) consistency and rapid updates.",
+        "Led new EA.com project development through alpha phase, designing and documenting projected architecture and implementing new technologies, processes, and patterns to completely revamp web development throughout the EA marketing ecosystem. This has eliminated roughly 80% of the redundant, boilerplate work required to build new projects, allowing developers to focus on research and innovation. Polymer/Web Components, Play Framework on Java, and Adobe Experience Manager are some of the technologies used.",
+        "Using new EA.com-founded architecture and processes, developed Titanfall Tips and Tricks application in one 2-week sprint.",
+        "Designed and developed FIFA 2014 World Cup Bracket Tournament Challenge. This application allowed players to submit a bracket prediction for the 2014 World Cup. It included features like allowing users to re/submit a bracket mid-tournament for a pre-calculated penalty, automatic calculation of scores and leaderboards after each match result was posted, and sharing of a player's bracket for increased social engagement. For the duration of the 2014 World Cup, EASPORTS.com saw a 2,500+% increase in traffic. AngularJS, Symfony2, and MySQL were some of the technologies used.",
+        "Designed and developed many other applications in the past including Madden Ultimate Team 13 and 14 game-to-web extensions, Madden Connected Careers/Connected Franchise 13 and 14 game-to-web extensions, NCAA Online Dynasty game-to-web extension, PGA Tiger Woods Country Clubs application, etc."
+      ]
+    },
+    {
+      "name": "MindComet",
+      "position": "Senior Software Developer",
+      "startDate": "2012-02",
+      "endDate": "2012-07",
+      "highlights": [
+        "Responsible for development of multiple client websites from Alpha development to quality assurance stages. This involved both back-end and front-end development. Many different technologies were used, including PHP and C# on ASP.NET, Drupal and Umbraco frameworks, HTML5, CSS3, Javascript, jQuery, et al.",
+        "Assisted with finalizing development of Drupal site for Bankers Healthcare Group.",
+        "Architected and developed new site for Labor Finders using Umbraco framework with C# ASP.NET extensions."
+      ]
+    },
+    {
+      "name": "Home",
+      "position": "Freelance Web Developer",
+      "startDate": "2010-08",
+      "endDate": "2012-02",
+      "highlights": [
+        "Scruffymurphysorlando.com - Converted static HTML site to Wordpress resulting in ease of maintenance/changes",
+        "Pawsketeers.com - Various site upgrades and changes using Couponic script based on Yii Framework"
+      ]
+    },
+    {
+      "name": "Barnett Murphy, Inc",
+      "position": "Web Developer",
+      "startDate": "2010-08",
+      "endDate": "2011-02",
+      "highlights": [
+        "Assisted with design and development of a direct marketing mailer portal which allowed Toyota dealerships throughout the southeastern United States to order targeted mailers and increase sales."
+      ]
+    },
+    {
+      "name": "Bright House Networks",
+      "position": "Business Solutions Support Lead",
+      "startDate": "2009-07",
+      "endDate": "2012-03",
+      "highlights": [
+        "Lead Technician/Supervisor for Business Solutions Support",
+        "Provided Tier I-III support and resolution.",
+        "Developed and maintained a service tool hub (BC Server) that allowed integration of various tools necessary for call center use. This tool hub greatly increased agent efficiency by providing interfaces and services to allow for quick modem/UBR configuration, reclaiming of stale static IP blocks, and others functionalities.",
+        "Developed and maintained various online forms necessary for call center operation, including an adjustment request form that would output a PDF and send it as an e-mail attachment to leadership for processing."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "New Horizons Computer Learning Center",
+      "area": "Programming and Information Technology",
+      "studyType": "Certification",
+      "startDate": "2009-02",
+      "endDate": "2009-07"
+    },
+    {
+      "institution": "University of South Carolina Upstate",
+      "area": "Computer Science",
+      "studyType": "Bachelor Coursework",
+      "startDate": "2006-08",
+      "endDate": "2008-07"
+    },
+    {
+      "institution": "University of Mississippi",
+      "area": "Mechanical Engineering",
+      "studyType": "Bachelor Coursework",
+      "startDate": "2002-08",
+      "endDate": "2003-05"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Front-End",
+      "keywords": [
+        "React",
+        "JavaScript",
+        "ES6+",
+        "TypeScript",
+        "Polymer",
+        "AngularJS",
+        "Web Components",
+        "HTML5",
+        "CSS3",
+        "SASS/SCSS",
+        "LESS",
+        "PostCSS",
+        "Bootstrap",
+        "jQuery",
+        "AJAX"
+      ]
+    },
+    {
+      "name": "Back-End",
+      "keywords": [
+        "Node.js",
+        "Express",
+        "Koa",
+        "PHP",
+        "Symfony2",
+        "REST",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Amazon Web Services",
+      "keywords": [
+        "DynamoDB",
+        "Lambda",
+        "API Gateway",
+        "SNS",
+        "SQS"
+      ]
+    },
+    {
+      "name": "Others",
+      "keywords": [
+        "Git",
+        "Docker",
+        "MVC",
+        "OOP",
+        "JSON",
+        "XML",
+        "Agile",
+        "Scrum",
+        "Kanban",
+        "PMP",
+        "SDLC",
+        "TDD",
+        "BDD"
+      ]
+    }
+  ]
+}
