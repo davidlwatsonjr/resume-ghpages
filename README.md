@@ -2,7 +2,7 @@
 
 GitHub Pages serves the generated `index.html` at
 [resume.davidlwatsonjr.com](https://resume.davidlwatsonjr.com/).
-The former preview and theme URLs redirect to the homepage.
+The older theme URLs redirect to the homepage.
 
 Edit `resume.json`, then regenerate the page with Node.js:
 
