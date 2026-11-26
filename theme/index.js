@@ -51,8 +51,49 @@ function section(title, content, className = '') {
   return `<section class="section ${className}"><h2>${title}</h2><div class="section-content">${content}</div></section>`;
 }
 
-function render(resume = {}) {
+function searchMetadata(basics, seo, title) {
+  const { canonicalUrl, description, socialImage } = seo;
+  const person = {
+    '@type': 'Person',
+    '@id': basics.url + '#david-watson',
+    name: basics.name,
+    alternateName: seo.alternateNames,
+    jobTitle: basics.label,
+    url: basics.url,
+    image: basics.image ? new URL(basics.image, canonicalUrl).href : undefined,
+    sameAs: (basics.profiles ?? []).map(({ url }) => url).filter(Boolean),
+  };
+  const profile = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    '@id': canonicalUrl + '#profile',
+    url: canonicalUrl,
+    name: title,
+    description,
+    mainEntity: person,
+  };
+  const json = JSON.stringify(profile).replace(/</g, '\\u003c');
+
+  return '<meta name="description" content="' + escape(description) + '">\n' +
+    '  <link rel="canonical" href="' + escape(canonicalUrl) + '">\n' +
+    '  <meta name="robots" content="max-image-preview:large">\n' +
+    '  <meta property="og:type" content="profile">\n' +
+    '  <meta property="og:title" content="' + escape(title) + '">\n' +
+    '  <meta property="og:description" content="' + escape(description) + '">\n' +
+    '  <meta property="og:url" content="' + escape(canonicalUrl) + '">\n' +
+    '  <meta property="og:image" content="' + escape(socialImage) + '">\n' +
+    '  <meta property="og:image:alt" content="' + escape(basics.name) + '">\n' +
+    '  <meta name="twitter:card" content="summary_large_image">\n' +
+    '  <link rel="icon" href="/favicon.ico" sizes="any">\n' +
+    '  <link rel="apple-touch-icon" href="/apple-touch-icon.png">\n' +
+    '  <script type="application/ld+json">' + json + '</script>';
+}
+
+function render(resume = {}, seo) {
   const { basics = {} } = resume;
+  const title = seo
+    ? basics.name + ' Resume | ' + basics.label
+    : join([basics.name || 'Resume', basics.label], ' | ');
   const { location = {} } = basics;
   const locationText = join([location.city, location.region, location.countryCode], ', ');
   const portraitUrl = basics.image ?? '';
@@ -63,7 +104,7 @@ function render(resume = {}) {
     escape(locationText),
     link('mailto:' + basics.email, basics.email),
     link('tel:' + basics.phone, basics.phone),
-    link(basics.url, basics.url?.replace(/^https?:\/\//, '').replace(/\/$/, '')),
+    link(basics.url, seo && basics.url ? 'Portfolio and posts' : basics.url?.replace(/^https?:\/\//, '').replace(/\/$/, '')),
     ...(basics.profiles ?? []).map((profile) => link(profile.url, profile.network || profile.username)),
   ].filter(Boolean);
   const entries = (key, formatter) => (resume[key] ?? []).map(formatter).join('');
@@ -75,7 +116,8 @@ function render(resume = {}) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escape(join([basics.name || 'Resume', basics.label], ' | '))}</title>
+  <title>${escape(title)}</title>
+  ${seo ? searchMetadata(basics, seo, title) : ''}
   <style>${css}</style>
 </head>
 <body>
