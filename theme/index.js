@@ -104,7 +104,7 @@ function render(resume = {}, seo) {
     escape(locationText),
     link('mailto:' + basics.email, basics.email),
     link('tel:' + basics.phone, basics.phone),
-    link(basics.url, seo && basics.url ? 'Portfolio and posts' : basics.url?.replace(/^https?:\/\//, '').replace(/\/$/, '')),
+    link(basics.url, basics.url?.replace(/^https?:\/\//, '').replace(/\/$/, '')),
     ...(basics.profiles ?? []).map((profile) => link(profile.url, profile.network || profile.username)),
   ].filter(Boolean);
   const entries = (key, formatter) => (resume[key] ?? []).map(formatter).join('');
@@ -125,7 +125,7 @@ function render(resume = {}, seo) {
   <main class="resume">
     <header class="masthead">
       ${portrait}
-      <h1>${escape(basics.name || 'Resume')}</h1>
+      <h1>${escape(seo?.displayName || basics.name || 'Resume')}</h1>
       ${basics.label ? '<p class="role">' + escape(basics.label) + '</p>' : ''}
       ${contacts.length ? '<ul class="contact" aria-label="Contact and profiles">' + contacts.map((contact) => '<li>' + contact + '</li>').join('') + '</ul>' : ''}
     </header>

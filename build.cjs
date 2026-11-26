@@ -17,4 +17,4 @@ const seo = {
   socialImage: 'https://davidlwatsonjr.com/assets/david-watson-social.jpg',
 };
 
-writeFileSync(join(__dirname, 'index.html'), render(require('./resume.json'), seo));
+writeFileSync(join(__dirname, 'index.html'), render(require('./resume.json'), { ...seo, displayName: 'David Watson' }));
